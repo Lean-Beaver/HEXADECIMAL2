@@ -1,0 +1,373 @@
+import java.util.Scanner;
+//Scanner being imported
+class Main {
+  static double[] METH(double NUMBER) 
+  {
+    double num = NUMBER;
+    double num16 = 16;
+    double remainder = 0;
+    double remainder1 = 0;
+    double remainder2 = 0;
+    double remainder3 = 0;
+    double remainder4 = 0;
+    double remainder5 = 0;
+    double remainder6 = 0;
+    double remainder7 = 0;
+    //variables
+    
+    remainder = num/num16;
+    long Number = (long) remainder;
+    remainder = remainder - Number;
+    remainder = remainder * num16;
+    if (Number<16)
+    {
+      remainder1=Number;
+      Number=0;
+      double Hexa[]={remainder7, remainder6, remainder5, remainder4, remainder3, remainder2, remainder1, remainder};
+      return Hexa;
+    }
+    //this gives you the farthest right number in hexadecimal way
+
+    remainder1 = Number/num16;
+    Number = (long) remainder1;
+    remainder1 = remainder1 - Number;
+    remainder1 = remainder1 * num16;
+    if (Number<16)
+    {
+      remainder2=Number;
+      Number=0;
+      double Hexa[]={remainder7, remainder6, remainder5, remainder4, remainder3, remainder2, remainder1, remainder};
+      return Hexa;
+    }
+    //this gives you the farthest second right number in hexadecimal way
+    
+    remainder2 = Number/num16;
+    Number = (long) remainder2;
+    remainder2 = remainder2 - Number;
+    remainder2 = remainder2 * num16;
+    if (Number<16)
+    {
+      remainder3=Number;
+      Number=0;
+      double Hexa[]={remainder7, remainder6, remainder5, remainder4, remainder3, remainder2, remainder1, remainder};
+      return Hexa;
+    }
+    //this gives you the farthest third right number in hexadecimal way
+    
+    remainder3 = Number/num16;
+    Number = (long) remainder3;
+    remainder3 = remainder3 - Number;
+    remainder3 = remainder3 * num16;
+    if (Number<16)
+    {
+      remainder4=Number;
+      Number=0;
+      double Hexa[]={remainder7, remainder6, remainder5, remainder4, remainder3, remainder2, remainder1, remainder};
+      return Hexa;
+    }  
+    //this gives you the farthest fourth right number in hexadecimal way
+    
+    remainder4 = Number/num16;
+    Number = (long) remainder4;
+    remainder4 = remainder4 - Number;
+    remainder4 = remainder4 * num16;
+    if (Number<16)
+    {
+      remainder5=Number;
+      Number=0;
+      double Hexa[]={remainder7, remainder6, remainder5, remainder4, remainder3, remainder2, remainder1, remainder};
+      return Hexa;
+    }  
+    //this gives you the farthest fifth right number in hexadecimal way
+    
+    remainder5 = Number/num16;
+    Number = (long) remainder5;
+    remainder5 = remainder5 - Number;
+    remainder5 = remainder5 * num16;
+    if (Number<16)
+    {
+      remainder6=Number;
+      Number=0;
+      double Hexa[]={remainder7, remainder6, remainder5, remainder4, remainder3, remainder2, remainder1, remainder};
+      return Hexa;
+    }  
+    //this gives you the farthest sixth right number in hexadecimal way
+    
+    remainder6 = Number/num16;
+    Number = (long) remainder6;
+    remainder6 = remainder6 - Number;
+    remainder6 = remainder6 * num16;
+    if (Number<16)
+    {
+      remainder7=Number;
+      Number=0;
+      double Hexa[]={remainder7, remainder6, remainder5, remainder4, remainder3, remainder2, remainder1, remainder};
+      return Hexa;
+    }   
+    //this gives you the farthest seventh right number in hexadecimal way
+    
+    remainder7 = Number/num16;
+    Number = (long) remainder7;
+    remainder7 = remainder7 - Number;
+    remainder7 = remainder7 * num16;
+    //this gives you the farthest eighth right number in hexadecimal way
+    
+    double Hexa[]={remainder7, remainder6, remainder5, remainder4, remainder3, remainder2, remainder1, remainder};
+    return Hexa;
+  }
+  //my method, it converts the number to provided into a hexa decimal type format that is used to convert it to hexadecimal
+  public static void main(String[] args) {
+    Scanner ANSWERS = new Scanner(System.in);
+    //declaring my scanner
+    try
+    {
+      double Number;
+      int intermediary;
+      String character;
+      String character1;
+      String character2;
+      String character3;
+      String character4;
+      String character5;
+      String character6;
+      String character7;
+      //declaring my variables
+      System.out.println("THE BIGGEST NUMBER YOU CAN USE HERE IS 4,294,967,295, SO PLEASE DON'T GO OVER THAT.\nWith that being said, what number would you like to input?");
+      Number = ANSWERS.nextDouble();
+      Number = (long) Number;
+      if (Number > 4294967295L)
+      {
+        System.out.println("I told you not to do that. . . The consequences will be severe.");
+      }
+      else if (Number >= 16L)
+      {
+        double Hexa[] = METH(Number);
+        intermediary=(int)Hexa[0];
+        character=String.valueOf(intermediary);
+        intermediary=(int)Hexa[1];
+        character1=String.valueOf(intermediary);
+        intermediary=(int)Hexa[2];
+        character2=String.valueOf(intermediary);
+        intermediary=(int)Hexa[3];
+        character3=String.valueOf(intermediary);
+        intermediary=(int)Hexa[4];
+        character4=String.valueOf(intermediary);
+        intermediary=(int)Hexa[5];
+        character5=String.valueOf(intermediary);
+        intermediary=(int)Hexa[6];
+        character6=String.valueOf(intermediary);
+        intermediary=(int)Hexa[7];
+        character7=String.valueOf(intermediary);
+        //converts the double from my method to an integer, and then into a string
+        if (character7.equals("15"))
+        {
+          character7="F";
+        }
+        else if (character7.equals("14"))
+        {
+          character7="E";
+        }
+        else if (character7.equals("13"))
+        {
+          character7="D";
+        }
+        else if (character7.equals("12"))
+        {
+          character7="C";
+        }
+        else if (character7.equals("11"))
+        {
+          character7="B";
+        }
+        else if (character7.equals("10"))
+        {
+          character7="A";
+        }
+        if (character6.equals("15"))
+        {
+          character6="F";
+        }
+        else if (character6.equals("14"))
+        {
+          character6="E";
+        }
+        else if (character6.equals("13"))
+        {
+          character6="D";
+        }
+        else if (character6.equals("12"))
+        {
+          character6="C";
+        }
+        else if (character6.equals("11"))
+        {
+          character6="B";
+        }
+        else if (character6.equals("10"))
+        {
+          character6="A";
+        }
+        if (character5.equals("15"))
+        {
+          character5="F";
+        }
+        else if (character5.equals("14"))
+        {
+          character5="E";
+        }
+        else if (character5.equals("13"))
+        {
+          character5="D";
+        }
+        else if (character5.equals("12"))
+        {
+          character5="C";
+        }
+        else if (character5.equals("11"))
+        {
+          character5="B";
+        }
+        else if (character5.equals("10"))
+        {
+          character5="A";
+        }
+        if (character4.equals("15"))
+        {
+          character4="F";
+        }
+        else if (character4.equals("14"))
+        {
+          character4="E";
+        }
+        else if (character4.equals("13"))
+        {
+          character4="D";
+        }
+        else if (character4.equals("12"))
+        {
+          character4="C";
+        }
+        else if (character4.equals("11"))
+        {
+          character4="B";
+        }
+        else if (character4.equals("10"))
+        {
+          character4="A";
+        }
+        if (character3.equals("15"))
+        {
+          character3="F";
+        }
+        else if (character3.equals("14"))
+        {
+          character3="E";
+        }
+        else if (character3.equals("13"))
+        {
+          character3="D";
+        }
+        else if (character3.equals("12"))
+        {
+          character3="C";
+        }
+        else if (character3.equals("11"))
+        {
+          character3="B";
+        }
+        else if (character3.equals("10"))
+        {
+          character3="A";
+        }
+        if (character2.equals("15"))
+        {
+          character2="F";
+        }
+        else if (character2.equals("14"))
+        {
+          character2="E";
+        }
+        else if (character2.equals("13"))
+        {
+          character2="D";
+        }
+        else if (character2.equals("12"))
+        {
+          character2="C";
+        }
+        else if (character2.equals("11"))
+        {
+          character2="B";
+        }
+        else if (character2.equals("10"))
+        {
+          character2="A";
+        }
+        if (character1.equals("15"))
+        {
+          character1="F";
+        }
+        else if (character1.equals("14"))
+        {
+          character1="E";
+        }
+        else if (character1.equals("13"))
+        {
+          character1="D";
+        }
+        else if (character1.equals("12"))
+        {
+          character1="C";
+        }
+        else if (character1.equals("11"))
+        {
+          character1="B";
+        }
+        else if (character1.equals("10"))
+        {
+          character1="A";
+        }
+        if (character.equals("15"))
+        {
+          character="F";
+        }
+        else if (character.equals("14"))
+        {
+          character="E";
+        }
+        else if (character.equals("13"))
+        {
+          character="D";
+        }
+        else if (character.equals("12"))
+        {
+          character="C";
+        }
+        else if (character.equals("11"))
+        {
+          character="B";
+        }
+        else if (character.equals("10"))
+        {
+          character="A";
+        }
+        //all of these if else, and the singular if statement convert anything between 10-15 into the corresponging letter 
+        System.out.println(character+" "+character1+" "+character2+" "+character3+" "+character4+" "+character5+" "+character6+" "+character7);
+      }
+      else if (Number >= 1L)
+      {
+        System.out.println("No, that is too easy, quit being stupid!");
+        //emotional damage
+      }
+      else 
+      {
+        System.out.println("HOW THOUGH?");
+        //emotional damage (for me because im so confused at you're stupidity)
+      }
+    }
+    finally 
+      {
+      ANSWERS.close();//this is the scanner closing
+    }
+  }
+}
